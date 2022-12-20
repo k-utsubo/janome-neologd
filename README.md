@@ -8,7 +8,7 @@ Example for janome
 
 ```
  from janome.tokenizer import Tokenizer
- t = Tokenizer("../dic/neologd")
+ t = Tokenizer("v0.0.7")
  for token in t.tokenize('8月3日に放送された「中居正広の金曜日のスマイルたちへ」(TBS系)で、1日たった5分でぽっこりおなかを解消するというダイエット方法を紹介。キンタロー。のダイエットにも密着。'):
        print(token)
 
@@ -48,7 +48,7 @@ modified pymlask is [here](https://github.com/k-utsubo/pymlask)
 
 ```
  from mlask import MLAsk
- emotion_analyzer = MLAsk("../neologd") # user dictionary directory
+ emotion_analyzer = MLAsk("v0.0.7") # user dictionary directory
  emotion_analyzer.analyze('彼のことは嫌いではない！(;´Д`)')
  # => {'text': '彼のことは嫌いではない！(;´Д`)',
  #     'emotion': defaultdict(<class 'list'>,{'yorokobi': ['嫌い*CVS'], 'suki': ['嫌い*CVS']}),
