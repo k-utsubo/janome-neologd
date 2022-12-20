@@ -5,14 +5,14 @@ User dictionary for [janome](https://github.com/mocobeta/janome) using [neologd]
 
 Example for janome
 =========
-.. code:: python
 
+```
  from janome.tokenizer import Tokenizer
  t = Tokenizer("../dic/neologd")
  for token in t.tokenize('8月3日に放送された「中居正広の金曜日のスマイルたちへ」(TBS系)で、1日たった5分でぽっこりおなかを解消するというダイエット方法を紹介。キンタロー。のダイエットにも密着。'):
        print(token)
- # Output exceeds the size limit. Open the full output data in a text editor
-8月3日	名詞,固有名詞,一般,*,*,*,8月3日,ハチガツミッカ,ハチガツミッカ
+
+ #8月3日	名詞,固有名詞,一般,*,*,*,8月3日,ハチガツミッカ,ハチガツミッカ
  #に	助詞,格助詞,一般,*,*,*,に,ニ,ニ
  #放送	名詞,サ変接続,*,*,*,*,放送,ホウソウ,ホーソー
  #さ	動詞,自立,*,*,サ変・スル,未然レル接続,する,サ,サ
@@ -37,17 +37,16 @@ Example for janome
  #する	動詞,自立,*,*,サ変・スル,基本形,する,スル,スル
  #という	助詞,格助詞,連語,*,*,*,という,トイウ,トユウ
  #ダイエット方法	名詞,固有名詞,一般,*,*,*,ダイエット方法,ダイエットホウホウ,ダイエットホウホー
- #...
  #に	助詞,格助詞,一般,*,*,*,に,ニ,ニ
  #も	助詞,係助詞,*,*,*,*,も,モ,モ
  #密着	名詞,サ変接続,*,*,*,*,密着,ミッチャク,ミッチャク
  #。	記号,句点,*,*,*,*,。,。,。
-
+```
 Example for pymlask
 =========
 modified pymlask is [here](https://github.com/k-utsubo/pymlask)
-.. code:: python
 
+```
  from mlask import MLAsk
  emotion_analyzer = MLAsk("../neologd") # user dictionary directory
  emotion_analyzer.analyze('彼のことは嫌いではない！(;´Д`)')
@@ -60,4 +59,4 @@ modified pymlask is [here](https://github.com/k-utsubo/pymlask)
  #     'intensifier': {'exclamation': ['！'], 'emotikony': ['´Д`', 'Д`', '´Д', '(;´Д`)']},
  #     'representative': ('yorokobi', ['嫌い*CVS'])
  #     }
-
+```
